@@ -15,8 +15,8 @@ const onSubmit = (value: InferType<typeof TodoFormSchema>) => {
   todo.addTodo(value.todo)
 }
 
-const onTaskTitleChanged = (event: any) => {
-  todo.setTaskTitle(event.target.innerText)
+const onTaskTitleChanged = (event: Event) => {
+  todo.setTaskTitle((event.target as HTMLInputElement).innerText)
 }
 </script>
 
@@ -27,6 +27,7 @@ const onTaskTitleChanged = (event: any) => {
     <h2 class="task-title">
       <span
         contenteditable
+        spellcheck="false"
         @keydown.enter.prevent="onTaskTitleChanged"
         class="task-title__editable"
         >{{ taskTitle }}</span
@@ -44,6 +45,7 @@ const onTaskTitleChanged = (event: any) => {
     :items="todos"
     @done="(id, status) => todo.setTodoComplete(id, status)"
     @delete="todo.deleteTodo($event)"
+    @update="(id, text) => todo.updateTodo(id, text)"
   />
   <div v-else class="empty-todo">
     <InboxIcon class="empty-todo__icon" />

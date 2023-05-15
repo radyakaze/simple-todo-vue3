@@ -39,6 +39,14 @@ export const useTodoStore = defineStore('todo', {
 
       this.update()
     },
+    updateTodo(todoItemId: string, text: string) {
+      this.todos = this.todos.map((todo) => ({
+        ...todo,
+        text: todo.id === todoItemId ? text : todo.text
+      }))
+
+      this.update()
+    },
     deleteTodo(todoItemId: string) {
       this.todos = this.todos.filter((todo) => todo.id !== todoItemId)
 

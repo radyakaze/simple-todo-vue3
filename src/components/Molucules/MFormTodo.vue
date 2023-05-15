@@ -20,9 +20,14 @@ const onSubmit = (event: Record<string, unknown>, form: SubmissionContext) => {
 </script>
 
 <template>
-  <Form class="todo-form" :validation-schema="TodoFormSchema" @submit="onSubmit">
+  <Form
+    v-slot="{ isSubmitting }"
+    class="todo-form"
+    :validation-schema="TodoFormSchema"
+    @submit="onSubmit"
+  >
     <AInput name="todo" class="input-todo" placeholder="Add Todo" />
-    <AButton icon-only>
+    <AButton icon-only :loading="isSubmitting">
       <Send />
     </AButton>
   </Form>
