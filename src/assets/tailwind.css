@@ -1,0 +1,13 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply max-w-xl;
+    @apply mx-auto;
+    @apply text-black;
+    @apply bg-body-bg;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
