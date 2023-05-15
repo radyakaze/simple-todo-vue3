@@ -42,6 +42,7 @@ const modelValue = useVModel(props, 'modelValue')
     @apply h-6;
     @apply w-6;
     @apply bg-gray;
+    @apply bg-opacity-40;
     @apply text-transparent;
     @apply flex;
     @apply justify-center;

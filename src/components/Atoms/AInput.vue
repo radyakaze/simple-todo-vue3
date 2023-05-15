@@ -81,7 +81,7 @@ const [DefineTemplate, ReuseTemplate] = createReusableTemplate<{
       @apply appearance-none;
       @apply outline-none;
       @apply border;
-      @apply rounded;
+      @apply rounded-lg;
       @apply border-gray-dark;
       @apply w-full;
       @apply focus:ring-4;

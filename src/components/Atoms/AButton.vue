@@ -71,7 +71,7 @@ const onClick = (e: MouseEvent) => {
 .button {
   @apply font-medium;
   @apply box-border;
-  @apply rounded;
+  @apply rounded-lg;
   @apply transition-colors;
   @apply duration-75;
   @apply ease-in-out;

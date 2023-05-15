@@ -15,6 +15,6 @@ import OHeader from '@/components/Organisms/OHeader.vue'
 <style lang="scss" scoped>
 #main {
   @apply container;
-  @apply px-2 lg:px-0;
+  @apply px-3.5 lg:px-0;
 }
 </style>
